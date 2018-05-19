@@ -24,10 +24,29 @@
 
 <script>
 import AppLogo from '~/components/AppLogo.vue'
+import rehive from 'rehive';
 
 export default {
   components: {
     AppLogo
+  },
+  methods: {
+    login: function() {
+      console.log('rehive is', rehive);
+      rehive.auth.login({
+          user: "dracogio@gmail.com",
+          company: "dogjob",
+          password: "password"
+      }).then(function(user){
+          console.log('user is', user);
+      },function(err){
+          console.log('oh no something went wrong');
+      })
+    }
+  },
+  created: function(){
+      console.log('hejj');
+      this.login();
   }
 }
 </script>
