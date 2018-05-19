@@ -4,11 +4,15 @@
       <div class="form">
         <form class="" action="index.html" method="post">
           <label for="">Username</label>
-          <input type="text" name="" value="" class="input">
+          <input type="text" name="" value="" class="input" v-model="username">
           <label for="">Password</label>
-          <input type="password" name="" value=""  class="input">
+          <input type="password" name="" value=""  class="input" v-model="password">
           <div class="" align="center">
-            <button class="button" type="button" name="button">Submit</button>
+            <button class="button" type="button" name="button" @click="login">Submit</button>
+            <br><br>
+            <nuxt-link to="/register" class="link">Not a member? Sign up</nuxt-link>
+
+            <p class="error.status" v-if="error"> {{ error.msg }}</p>
           </div>
 
         </form>
@@ -17,9 +21,36 @@
 </template>
 
 <script>
+import Rehive from 'rehive';
+
+const rehive = new Rehive({storageMethod: 'local'});
 
 export default {
-
+  data: function(){
+    return {
+      username: '',
+      password: '',
+      error: {
+        status: false,
+        msg: "invalid login"
+      }
+    }
+  },
+  methods: {
+    login: function() {
+      console.log('rehive is', rehive);
+      rehive.auth.login({
+          user: this.username,
+          company: "dogjob",
+          password: this.password
+      }).then(function(user){
+          console.log('user is', user);
+      },function(err){
+          console.log('oh no something went wrong',err);
+          this.error.status = true;
+      })
+    }
+  }
 }
 
 </script>
@@ -74,5 +105,19 @@ export default {
 
 .button:hover {
   background-color: #4f9a94;
+}
+
+.link{
+  font-size: 15px;
+  color: #79c4bd;
+
+}
+
+.error{
+  margin-top: 5%;
+  background: FIREBRICK;
+  color: WHITE;
+  padding: 10px;
+  border-radius: 3px;
 }
 </style>
