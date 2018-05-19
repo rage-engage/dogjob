@@ -24,6 +24,7 @@
 
 <script>
 import AppLogo from '~/components/AppLogo.vue'
+import Login from './login.vue'
 
 export default {
   components: {
