@@ -1,6 +1,10 @@
 <template>
   <section class="flex">
+    <div class="header-flex">
       <h1 class="header">Space Station</h1>
+    </div>
+
+
       <h2 class="subHeader">Dogs</h2>
       <div class="container">
           <div class="wrapper">
@@ -10,66 +14,17 @@
                   <li><p>Description: Dog is a good boy</p></li>
                   <li><p>Breed: Dog</p></li>
                   <li><input type="number" placeholder="Amount"></li>
-                  <li><button class="button" type="submit">Submit</button></li>
+                  <li><button class="button2" type="submit">Submit</button></li>
+                  <div id="myProgress">
+                    <div id="myBar"></div>
+                  </div>
               </ul>
-                <ul class="dog">
-                  <li><img src="../assets/DogJog.png" alt=""></li>
-                  <li><p>Dog Name: Name</p></li>
-                  <li><p>Description: Dog is a good boy</p></li>
-                  <li><p>Breed: Dog</p></li>
-                  <li><input type="number" placeholder="Amount"></li>
-                  <li><button class="button" type="submit">Submit</button></li>
-              </ul>
-                <ul class="dog">
-                  <li><img src="../assets/DogJog.png" alt=""></li>
-                  <li><p>Dog Name: Name</p></li>
-                  <li><p>Description: Dog is a good boy</p></li>
-                  <li><p>Breed: Dog</p></li>
-                  <li><input type="number" placeholder="Amount"></li>
-                  <li><button class="button" type="submit">Submit</button></li>
-              </ul>
-                <ul class="dog">
-                  <li><img src="../assets/DogJog.png" alt=""></li>
-                  <li><p>Dog Name: Name</p></li>
-                  <li><p>Description: Dog is a good boy</p></li>
-                  <li><p>Breed: Dog</p></li>
-                  <li><input type="number" placeholder="Amount"></li>
-                  <li><button class="button" type="submit">Submit</button></li>
-              </ul>
-                <ul class="dog">
-                  <li><img src="../assets/DogJog.png" alt=""></li>
-                  <li><p>Dog Name: Name</p></li>
-                  <li><p>Description: Dog is a good boy</p></li>
-                  <li><p>Breed: Dog</p></li>
-                  <li><input type="number" placeholder="Amount"></li>
-                  <li><button class="button" type="submit">Submit</button></li>
-              </ul>
-                <ul class="dog">
-                  <li><img src="../assets/DogJog.png" alt=""></li>
-                  <li><p>Dog Name: Name</p></li>
-                  <li><p>Description: Dog is a good boy</p></li>
-                  <li><p>Breed: Dog</p></li>
-                  <li><input type="number" placeholder="Amount"></li>
-                  <li><button class="button" type="submit">Submit</button></li>
-              </ul>
-                <ul class="dog">
-                  <li><img src="../assets/DogJog.png" alt=""></li>
-                  <li><p>Dog Name: Name</p></li>
-                  <li><p>Description: Dog is a good boy</p></li>
-                  <li><p>Breed: Dog</p></li>
-                  <li><input type="number" placeholder="Amount"></li>
-                  <li><button class="button" type="submit">Submit</button></li>
-              </ul>
-                <ul class="dog">
-                  <li><img src="../assets/DogJog.png" alt=""></li>
-                  <li><p>Dog Name: Name</p></li>
-                  <li><p>Description: Dog is a good boy</p></li>
-                  <li><p>Breed: Dog</p></li>
-                  <li><input type="number" placeholder="Amount"></li>
-                  <li><button class="button" type="submit">Submit</button></li>
-              </ul>
-              
+
           </div>
+      </div>
+
+      <div class="logo-div" align="right">
+        <img src="../assets/DogJog.png" alt="" class="logo">
       </div>
 
   </section>
@@ -89,6 +44,17 @@ export default {
 </script>
 
 <style>
+.logo{
+  height: 70px;
+  width: 70px;
+  margin: 1%;
+}
+
+.header-flex{
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
 
 .container {
     width: 100%;
@@ -99,7 +65,7 @@ export default {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;
     width: 100%;
     height: auto;
 }
@@ -125,7 +91,7 @@ ul li {
 
 .header{
   font-family: sans-serif;
-  font-weight: 400;
+  font-weight: 100;
   font-size: 2.0em;
   margin-top: 20px;
 }
@@ -133,11 +99,11 @@ ul li {
 .subHeader {
     font-family: sans-serif;
     font-weight: 100;
-    font-size: 1.5em;
+    font-size: 2em;
     margin-top: 20px;
 }
 
-.button {
+.button2 {
   /* position: relative; */
   padding: 10px 10px;
   border-radius: 10px;
@@ -150,8 +116,17 @@ ul li {
   cursor: pointer;
 }
 
-.button:hover {
+.button2:hover {
   background-color: #4f9a94;
 }
 
+#myProgress {
+    width: 100%;
+    background-color: grey;
+}
+#myBar {
+    width: 30%;
+    height: 15px;
+    background-color: #80CBC4;
+}
 </style>

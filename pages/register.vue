@@ -4,15 +4,15 @@
       <div class="form">
         <form class="" action="index.html" method="post">
           <label for="">First Name</label>
-          <input class="input" v-model="first_name" type="text" name="" id="firstName">
+          <input class="input" v-model="first_name" type="text" name="" id="firstName" required>
           <label for="">Last Name</label>
-          <input class="input" v-model="last_name" type="text" name="" id="lastName">
+          <input class="input" v-model="last_name" type="text" name="" id="lastName" required>
           <label for="">E-mail Address</label>
-          <input class="input" v-model="email" type="text" name="" id="email">
+          <input class="input" v-model="email" type="text" name="" id="email" required>
           <label for="">Password</label>
-          <input class="input" v-model="password1" type="text" name="" id="password" placeholder="Password must have at least 8 charachters">
+          <input class="input" v-model="password1" type="text" name="" id="password" placeholder="Password must have at least 8 charachters" required>
           <label for="">Confirm Password</label>
-          <input class="input" v-model="password2" type="text" name="" id="password" placeholder="Password must have at least 8 charachters">
+          <input class="input" v-model="password2" type="text" name="" id="password" placeholder="Password must have at least 8 charachters" required>
           <button class="button" type="button" name="button" @click="register">Register</button>
         </form>
       </div>

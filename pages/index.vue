@@ -1,20 +1,17 @@
 <template>
   <section class="container">
     <div>
-      <app-logo/>
+      <img src="../assets/DogJog.png" alt="">
       <h1 class="title">
-        dogjob
+        Dog Jog
       </h1>
       <h2 class="subtitle">
-        Nuxt.js project
+        Help dog shelters walk their dogs
       </h2>
       <div class="links">
+        <nuxt-link to="./login" class="button--grey">Login</nuxt-link>
         <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
+          href="https://github.com/rage-engage/dogjob"
           target="_blank"
           class="button--grey">GitHub</a>
       </div>
@@ -23,34 +20,8 @@
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
-import Login from './login.vue'
-import Rehive from 'rehive';
-
-const rehive = new Rehive({storageMethod: 'local'});
-
 export default {
-  components: {
-    AppLogo
-  },
-  methods: {
-    login: function() {
-      console.log('rehive is', rehive);
-      rehive.auth.login({
-          user: "dracogio@gmail.com",
-          company: "dogjob",
-          password: "password"
-      }).then(function(user){
-          console.log('user is', user);
-      },function(err){
-          console.log('oh no something went wrong');
-      })
-    }
-  },
-  created: function(){
-      console.log('hejj');
-      this.login();
-  }
+
 }
 </script>
 
@@ -67,17 +38,18 @@ export default {
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 50px;
   color: #35495e;
   letter-spacing: 1px;
 }
 
 .subtitle {
   font-weight: 300;
-  font-size: 42px;
+  font-size: 30px;
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
+  margin-top: 5%;
 }
 
 .links {

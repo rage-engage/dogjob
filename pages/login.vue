@@ -1,23 +1,25 @@
 <template>
-  <section class="flex">
-    <h1 class="header">Login</h1>
-      <div class="form">
-        <form class="" action="index.html" method="post">
-          <label for="">Username</label>
-          <input type="text" name="" value="" class="input" v-model="username">
-          <label for="">Password</label>
-          <input type="password" name="" value=""  class="input" v-model="password">
-          <div class="" align="center">
-            <button class="button" type="button" name="button" @click="login">Submit</button>
-            <br><br>
-            <nuxt-link to="/register" class="link">Not a member? Sign up</nuxt-link>
+  <div class="">
+    <section class="flex">
+      <h1 class="header">Login</h1>
+        <div class="form">
+          <form class="" action="index.html" method="post">
+            <label for="">Email</label>
+            <input type="text" name="" value="" class="input" v-model="email">
+            <label for="">Password</label>
+            <input type="password" name="" value=""  class="input" v-model="password">
+            <div class="" align="center">
+              <button class="button" type="button" name="button" @click="login">Submit</button>
+              <br><br>
+              <nuxt-link to="/register" class="link">Not a member? Sign up</nuxt-link>
 
-            <p class="error.status" v-if="error"> {{ error.msg }}</p>
-          </div>
+              <p class="error" v-if="error.status"> {{ error.msg }}</p>
+            </div>
 
-        </form>
-      </div>
-  </section>
+          </form>
+        </div>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -28,7 +30,7 @@ const rehive = new Rehive({storageMethod: 'local'});
 export default {
   data: function(){
     return {
-      username: '',
+      email: '',
       password: '',
       error: {
         status: false,
@@ -39,6 +41,7 @@ export default {
   methods: {
     login: function() {
       console.log('rehive is', rehive);
+      const self = this;
       rehive.auth.login({
           user: this.username,
           company: "dogjob",
@@ -47,7 +50,8 @@ export default {
           console.log('user is', user);
       },function(err){
           console.log('oh no something went wrong',err);
-          this.error.status = true;
+          self.error.status = true;
+          self.error.msg = "Invalid login";
       })
     }
   }
