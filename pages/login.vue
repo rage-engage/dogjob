@@ -1,14 +1,14 @@
 <template>
-  <section class="login-flex">
+  <section class="flex">
     <h1 class="header">Login</h1>
-      <div class="login-form">
+      <div class="form">
         <form class="" action="index.html" method="post">
           <label for="">Username</label>
           <input type="text" name="" value="" class="login-input">
           <label for="">Password</label>
           <input type="password" name="" value=""  class="login-input">
           <div class="" align="center">
-            <button class="login-button" type="button" name="button">Submit</button>
+            <button class="button" type="button" name="button">Submit</button>
           </div>
 
         </form>
@@ -24,8 +24,8 @@ export default {
 
 </script>
 
-<style scoped>
-.login-flex {
+<style>
+.flex {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,7 +40,7 @@ export default {
   font-size: 2.0em;
 }
 
-.login-form {
+.form {
   width: 30%;
   height: auto;
   background-color: white;
@@ -50,7 +50,7 @@ export default {
   /* box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.1); */
 }
 
-.login-input {
+.input {
   width: 100%;
   font-size: 15px;
   margin: 0 0 15px;
@@ -59,7 +59,7 @@ export default {
   padding-bottom: 7px;
 }
 
-.login-button {
+.button {
   /* position: relative; */
   padding: 10px 10px;
   border-radius: 10px;
@@ -72,7 +72,7 @@ export default {
   cursor: pointer;
 }
 
-.login-button:hover {
+.button:hover {
   background-color: #4f9a94;
 }
 </style>
