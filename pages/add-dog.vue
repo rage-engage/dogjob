@@ -1,10 +1,6 @@
 <template>
   <section class="flex">
-    <div class="header-flex">
-      <h1 class="header">Space Station</h1>
-    </div>
-
-
+      <h1 class="mainHeader">Space Station</h1>
       <h2 class="subHeader">Dogs</h2>
       <div class="container">
           <div class="wrapper">
@@ -131,11 +127,6 @@ ul li {
     width: 30%;
     height: 15px;
     background-color: #80CBC4;
-}
-input { 
-    text-align: center;
-    border: none;
-    border-bottom: 1px solid black;
 }
 
 </style>

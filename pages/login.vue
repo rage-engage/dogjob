@@ -41,13 +41,13 @@ export default {
   methods: {
     login: function() {
       rehive.auth.login({
-          user: this.username,
+          user: this.email,
           company: "dogjob",
           password: this.password
-      }).then(function(user){
+      }).then((user) => {
           console.log('user is', user);
-          this.$router.navigate('/dashboard');
-      },(err) => {
+          this.$router.push({ path: `/dashboard` });
+      },(err) =>{
           console.log('oh no something went wrong',err);
           this.error.status = true;
           this.error.msg = "Invalid login";
