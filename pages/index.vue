@@ -24,7 +24,9 @@
 
 <script>
 import AppLogo from '~/components/AppLogo.vue'
-import rehive from 'rehive';
+import Rehive from 'rehive';
+
+const rehive = new Rehive({storageMethod: 'local'});
 
 export default {
   components: {
