@@ -122,6 +122,7 @@ ul li {
 
 .dog {
     padding-left: 0px;
+    padding: 80px;
 }
 
 .dog img {
@@ -174,7 +175,7 @@ ul li {
   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/57786/dog-walk.svg") no-repeat;
   width: 220px;
   /* height: 266px; */
-  height: 260px;
+  height: 360px;
   /* transform: translate3D(200px, 50px, 0); */
   transform: translate3D(50px, 50px, 0);
   /* the walking animation */
