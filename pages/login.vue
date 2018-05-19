@@ -4,9 +4,9 @@
       <div class="form">
         <form class="" action="index.html" method="post">
           <label for="">Username</label>
-          <input type="text" name="" value="" class="login-input">
+          <input type="text" name="" value="" class="input">
           <label for="">Password</label>
-          <input type="password" name="" value=""  class="login-input">
+          <input type="password" name="" value=""  class="input">
           <div class="" align="center">
             <button class="button" type="button" name="button">Submit</button>
           </div>
