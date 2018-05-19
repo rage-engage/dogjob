@@ -1,10 +1,14 @@
 <template>
   <section class="flex">
+<<<<<<< HEAD
     <div class="header-flex">
       <h1 class="header">Space Station</h1>
     </div>
 
 
+=======
+      <h1 class="mainHeader">Space Station</h1>
+>>>>>>> 2a51dd2c1de9832cfb4b4b8664e83efc09321edd
       <h2 class="subHeader">Dogs</h2>
       <div class="container">
           <div class="wrapper">
@@ -13,6 +17,7 @@
                   <li><p>Dog Name: Name</p></li>
                   <li><p>Description: Dog is a good boy</p></li>
                   <li><p>Breed: Dog</p></li>
+<<<<<<< HEAD
                   <li><input type="number" placeholder="Amount"></li>
                   <li><button class="button2" type="submit">Submit</button></li>
                   <div id="myProgress">
@@ -20,6 +25,76 @@
                   </div>
               </ul>
 
+=======
+                  <label for="">Tip Amount:</label>
+                  <li><input type="number"></li>
+                  <li><button class="button" type="submit">Submit</button></li>
+              </ul>
+                <ul class="dog">
+                  <li><img src="../assets/DogJog.png" alt=""></li>
+                  <li><p>Dog Name: Name</p></li>
+                  <li><p>Description: Dog is a good boy</p></li>
+                  <li><p>Breed: Dog</p></li>
+                  <label for="">Tip Amount:</label>
+                  <li><input type="number"></li>
+                  <li><button class="button" type="submit">Submit</button></li>
+              </ul>
+                <ul class="dog">
+                  <li><img src="../assets/DogJog.png" alt=""></li>
+                  <li><p>Dog Name: Name</p></li>
+                  <li><p>Description: Dog is a good boy</p></li>
+                  <li><p>Breed: Dog</p></li>
+                  <label for="">Tip Amount:</label>
+                  <li><input type="number"></li>
+                  <li><button class="button" type="submit">Submit</button></li>
+              </ul>
+                <ul class="dog">
+                  <li><img src="../assets/DogJog.png" alt=""></li>
+                  <li><p>Dog Name: Name</p></li>
+                  <li><p>Description: Dog is a good boy</p></li>
+                  <li><p>Breed: Dog</p></li>
+                  <label for="">Tip Amount:</label>
+                  <li><input type="number"></li>
+                  <li><button class="button" type="submit">Submit</button></li>
+              </ul>
+                <ul class="dog">
+                  <li><img src="../assets/DogJog.png" alt=""></li>
+                  <li><p>Dog Name: Name</p></li>
+                  <li><p>Description: Dog is a good boy</p></li>
+                  <li><p>Breed: Dog</p></li>
+                  <label for="">Tip Amount:</label>
+                  <li><input type="number"></li>
+                  <li><button class="button" type="submit">Submit</button></li>
+              </ul>
+                <ul class="dog">
+                  <li><img src="../assets/DogJog.png" alt=""></li>
+                  <li><p>Dog Name: Name</p></li>
+                  <li><p>Description: Dog is a good boy</p></li>
+                  <li><p>Breed: Dog</p></li>
+                  <label for="">Tip Amount:</label>
+                  <li><input type="number"></li>
+                  <li><button class="button" type="submit">Submit</button></li>
+              </ul>
+                <ul class="dog">
+                  <li><img src="../assets/DogJog.png" alt=""></li>
+                  <li><p>Dog Name: Name</p></li>
+                  <li><p>Description: Dog is a good boy</p></li>
+                  <li><p>Breed: Dog</p></li>
+                  <label for="">Tip Amount:</label>
+                  <li><input type="number"></li>
+                  <li><button class="button" type="submit">Submit</button></li>
+              </ul>
+                <ul class="dog">
+                  <li><img src="../assets/DogJog.png" alt=""></li>
+                  <li><p>Dog Name: Name</p></li>
+                  <li><p>Description: Dog is a good boy</p></li>
+                  <li><p>Breed: Dog</p></li>
+                  <label for="">Tip Amount:</label>
+                  <li><input type="number"></li>
+                  <li><button class="button" type="submit">Submit</button></li>
+              </ul>
+              
+>>>>>>> 2a51dd2c1de9832cfb4b4b8664e83efc09321edd
           </div>
       </div>
 
@@ -84,12 +159,15 @@ ul li {
     list-style: none;
 }
 
+.dog {
+    padding-left: 0px;
+}
 
 .dog img {
     height: 170px;
 }
 
-.header{
+.mainHeader{
   font-family: sans-serif;
   font-weight: 100;
   font-size: 2.0em;
@@ -120,6 +198,7 @@ ul li {
   background-color: #4f9a94;
 }
 
+<<<<<<< HEAD
 #myProgress {
     width: 100%;
     background-color: grey;
@@ -129,4 +208,12 @@ ul li {
     height: 15px;
     background-color: #80CBC4;
 }
+=======
+input { 
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+>>>>>>> 2a51dd2c1de9832cfb4b4b8664e83efc09321edd
 </style>
