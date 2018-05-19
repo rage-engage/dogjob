@@ -43,11 +43,12 @@ export default {
       console.log('rehive is', rehive);
       const self = this;
       rehive.auth.login({
-          user: this.username,
+          user: this.email,
           company: "dogjob",
           password: this.password
       }).then(function(user){
           console.log('user is', user);
+          
       },function(err){
           console.log('oh no something went wrong',err);
           self.error.status = true;
