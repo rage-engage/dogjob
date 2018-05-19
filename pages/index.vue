@@ -1,19 +1,15 @@
 <template>
   <section class="container">
     <div>
-      <img src="../assets/DogJog.png" alt="">
-      <h1 class="title">
+      <img src="../assets/logo.png" alt="" class="test">
+      <!-- <h1 class="title">
         Dog Jog
-      </h1>
+      </h1> -->
       <h2 class="subtitle">
         Help dog shelters walk their dogs
       </h2>
       <div class="links">
-        <nuxt-link to="./login" class="button--grey">Login</nuxt-link>
-        <a
-          href="https://github.com/rage-engage/dogjob"
-          target="_blank"
-          class="button--grey">GitHub</a>
+        <nuxt-link to="./login" class="button--green">Login</nuxt-link>
       </div>
     </div>
   </section>
@@ -26,6 +22,10 @@ export default {
 </script>
 
 <style>
+.test{
+  height: 400px;
+  width: 400px;
+}
 .container {
   min-height: 100vh;
   display: flex;
@@ -49,7 +49,6 @@ export default {
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
-  margin-top: 5%;
 }
 
 .links {

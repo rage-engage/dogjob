@@ -34,7 +34,7 @@
       </div>
 
       <div class="logo-div" align="right">
-        <img src="../assets/DogJog.png" alt="" class="logo">
+        <img src="../assets/logo2.png" alt="" class="logo">
       </div>
   </section>
 </template>
@@ -100,7 +100,7 @@ body{
 
 .container {
     width: 100%;
-    height: auto;
+    min-height: 70vh;
 }
 
 .flex {
@@ -163,7 +163,7 @@ ul li {
 }
 
 .the-h1{
-  font-weight: 400;
+  font-weight: 100;
   font-size: 1.5em;
 }
 

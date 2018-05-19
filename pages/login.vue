@@ -80,7 +80,6 @@ export default {
   margin: 3% auto 100px;
   padding: 45px;
   border-radius: 5%;
-  /* box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.1); */
 }
 
 .input {
@@ -93,7 +92,6 @@ export default {
 }
 
 .button {
-  /* position: relative; */
   padding: 10px 10px;
   border-radius: 10px;
   font-family: sans-serif;
