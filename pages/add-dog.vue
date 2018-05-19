@@ -8,13 +8,15 @@
                 <ul class="dog">
                     <li><img class="image" src="../assets/DogJog.png" alt=""></li>
                     <li><p>Dog Name: Name</p></li>
-                    <li><p>Description: Dog is a good boy</p></li>
-                    <li><p>Breed: Dog</p></li>
+                    <!-- <li><p>Description: Dog is a good boy</p></li>
+                    <li><p>Breed: Dog</p></li> -->
                     <li><input type="number" placeholder="Amount"></li>
                     <li><button class="button2" type="submit">Submit</button></li>
-                    <div id="myProgress">
+
+                    <div class='figure'></div>
+                    <!-- <div id="myProgress">
                       <div id="myBar"></div>
-                    </div>
+                    </div> -->
                 </ul>
 
             </div>
@@ -32,9 +34,17 @@ import Rehive from 'rehive';
 
 const rehive = new Rehive({storageMethod: 'local'});
 
-
-
 export default {
+  data: function(){
+    return {
+      progress: 0
+    }
+  },
+  methods: {
+    dogProgress(){
+
+    }
+  }
 
 }
 
@@ -137,4 +147,22 @@ ul li {
     background-color: #80CBC4;
 }
 
+/* dog walking */
+.figure {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/57786/dog-walk.svg") no-repeat;
+  width: 220px;
+  height: 266px;
+  transform: translate3D(200px, 50px, 0);
+  /* the walking animation */
+  animation: walk 0.78s steps(9) infinite;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+.no-svg .figure {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/57786/dog-walk.png");
+}
+
+@keyframes walk {
+  100% { background-position: 0 -2376px; }
+}
 </style>
