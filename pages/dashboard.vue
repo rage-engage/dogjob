@@ -9,7 +9,15 @@
 
       <div class="container">
           <div class="wrapper">
-              <ul class="dog">
+
+              <ul class="dog" v-for="group in groups" :key="group.name">
+                  <li><img class="image" src="../assets/Ss.jpg" alt=""></li>
+                  <li><p>{{group.name}}</p></li>
+                  <li><p>{{group.description}}</p></li>
+                  <li>  <nuxt-link to="/add-dog"> <button class="button" type="submit">View Dogs</button> </nuxt-link></li>
+              </ul>
+
+              <!-- <ul class="dog">
                   <li><img class="image" src="../assets/Ss.jpg" alt=""></li>
                   <li><p>Space Station</p></li>
                   <li><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis</p></li>
@@ -21,14 +29,7 @@
                   <li><p>Space Station</p></li>
                   <li><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis</p></li>
                   <li>  <nuxt-link to="/add-dog"> <button class="button" type="submit">View Dogs</button> </nuxt-link></li>
-              </ul>
-
-              <ul class="dog">
-                  <li><img class="image" src="../assets/Ss.jpg" alt=""></li>
-                  <li><p>Space Station</p></li>
-                  <li><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis</p></li>
-                  <li>  <nuxt-link to="/add-dog"> <button class="button" type="submit">View Dogs</button> </nuxt-link></li>
-              </ul>
+              </ul> -->
           </div>
       </div>
 
@@ -39,8 +40,39 @@
 </template>
 
 <script>
-export default {
 
+import Rehive from 'rehive';
+
+const rehive = new Rehive({storageMethod: 'local'});
+const rehiveAdmin = new Rehive({apiToken: '5118a45f37886966747bec5e385c4884364f277de77a30de2da31b93f3f2a3e8'});
+
+export default {
+  data: function(){
+    return {
+      groups: [],
+    }
+  },
+  methods: {
+    getGroups: function() {
+      rehiveAdmin.admin.groups.get().then((res) => {
+        console.log('grous', res);
+        // Get all the groups, ignore user, service and admin
+        const blackListGroups = ['user', 'service', 'admin'];
+        for (const group of res.results) {
+          // If the group is not blacklisted
+          if (!blackListGroups.includes(group.name)) {
+            this.groups.push(group);
+          }
+        }
+      }, (err) => {
+        console.log('Oh no an error occured when getting the groups', err);
+        alert('Oh no an error occured when getting the groups');
+      });
+    }
+  },
+  created() {
+    this.getGroups();
+  }
 }
 </script>
 

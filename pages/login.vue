@@ -45,7 +45,6 @@ export default {
           company: "dogjob",
           password: this.password
       }).then((user) => {
-          console.log('user is', user);
           this.$router.push({ path: `/dashboard` });
       },(err) =>{
           console.log('oh no something went wrong',err);
