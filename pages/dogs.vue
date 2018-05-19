@@ -22,9 +22,10 @@
                     filters: {
                         metadata__type: 'dog'
                     }
-                }).then(function (res) {
+                }).then((res) => {
                     this.dogs = res.results;
                 }, function (err) {
+                    console.log('an error occured', err);
                 });
             }
         },
