@@ -126,6 +126,9 @@ ul li {
     list-style: none;
 }
 
+.dog {
+    padding-left: 0px;
+}
 
 .dog img {
     height: 170px;
