@@ -9,7 +9,8 @@
                   <li><p>Dog Name: Name</p></li>
                   <li><p>Description: Dog is a good boy</p></li>
                   <li><p>Breed: Dog</p></li>
-                  <li><input type="number" placeholder="Amount"></li>
+                  <label for="">Tip Amount:</label>
+                  <li><input type="number"></li>
                   <li><button class="button" type="submit">Submit</button></li>
               </ul>
                 <ul class="dog">
@@ -17,7 +18,8 @@
                   <li><p>Dog Name: Name</p></li>
                   <li><p>Description: Dog is a good boy</p></li>
                   <li><p>Breed: Dog</p></li>
-                  <li><input type="number" placeholder="Amount"></li>
+                  <label for="">Tip Amount:</label>
+                  <li><input type="number"></li>
                   <li><button class="button" type="submit">Submit</button></li>
               </ul>
                 <ul class="dog">
@@ -25,7 +27,8 @@
                   <li><p>Dog Name: Name</p></li>
                   <li><p>Description: Dog is a good boy</p></li>
                   <li><p>Breed: Dog</p></li>
-                  <li><input type="number" placeholder="Amount"></li>
+                  <label for="">Tip Amount:</label>
+                  <li><input type="number"></li>
                   <li><button class="button" type="submit">Submit</button></li>
               </ul>
                 <ul class="dog">
@@ -33,7 +36,8 @@
                   <li><p>Dog Name: Name</p></li>
                   <li><p>Description: Dog is a good boy</p></li>
                   <li><p>Breed: Dog</p></li>
-                  <li><input type="number" placeholder="Amount"></li>
+                  <label for="">Tip Amount:</label>
+                  <li><input type="number"></li>
                   <li><button class="button" type="submit">Submit</button></li>
               </ul>
                 <ul class="dog">
@@ -41,7 +45,8 @@
                   <li><p>Dog Name: Name</p></li>
                   <li><p>Description: Dog is a good boy</p></li>
                   <li><p>Breed: Dog</p></li>
-                  <li><input type="number" placeholder="Amount"></li>
+                  <label for="">Tip Amount:</label>
+                  <li><input type="number"></li>
                   <li><button class="button" type="submit">Submit</button></li>
               </ul>
                 <ul class="dog">
@@ -49,7 +54,8 @@
                   <li><p>Dog Name: Name</p></li>
                   <li><p>Description: Dog is a good boy</p></li>
                   <li><p>Breed: Dog</p></li>
-                  <li><input type="number" placeholder="Amount"></li>
+                  <label for="">Tip Amount:</label>
+                  <li><input type="number"></li>
                   <li><button class="button" type="submit">Submit</button></li>
               </ul>
                 <ul class="dog">
@@ -57,7 +63,8 @@
                   <li><p>Dog Name: Name</p></li>
                   <li><p>Description: Dog is a good boy</p></li>
                   <li><p>Breed: Dog</p></li>
-                  <li><input type="number" placeholder="Amount"></li>
+                  <label for="">Tip Amount:</label>
+                  <li><input type="number"></li>
                   <li><button class="button" type="submit">Submit</button></li>
               </ul>
                 <ul class="dog">
@@ -65,7 +72,8 @@
                   <li><p>Dog Name: Name</p></li>
                   <li><p>Description: Dog is a good boy</p></li>
                   <li><p>Breed: Dog</p></li>
-                  <li><input type="number" placeholder="Amount"></li>
+                  <label for="">Tip Amount:</label>
+                  <li><input type="number"></li>
                   <li><button class="button" type="submit">Submit</button></li>
               </ul>
               
@@ -152,6 +160,12 @@ ul li {
 
 .button:hover {
   background-color: #4f9a94;
+}
+
+input { 
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid black;
 }
 
 </style>
