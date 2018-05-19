@@ -14,7 +14,7 @@
                   <li><img class="image" src="../assets/Ss.jpg" alt=""></li>
                   <li><p>{{group.name}}</p></li>
                   <li><p>{{group.description}}</p></li>
-                  <li>  <nuxt-link to="/add-dog"> <button class="button" type="submit">View Dogs</button> </nuxt-link></li>
+                  <li>  <nuxt-link to="/dogs"> <button class="button" type="submit">View Dogs</button> </nuxt-link></li>
               </ul>
 
               <!-- <ul class="dog">
@@ -55,7 +55,6 @@ export default {
   methods: {
     getGroups: function() {
       rehiveAdmin.admin.groups.get().then((res) => {
-        console.log('grous', res);
         // Get all the groups, ignore user, service and admin
         const blackListGroups = ['user', 'service', 'admin'];
         for (const group of res.results) {
@@ -68,6 +67,9 @@ export default {
         console.log('Oh no an error occured when getting the groups', err);
         alert('Oh no an error occured when getting the groups');
       });
+    },
+    getRoute(name) {
+      return `/organisation/${name}`;
     }
   },
   created() {
