@@ -46,7 +46,7 @@
         created() {
             console.log('hello');
             this.getDogs();
-            this.tipDog();
+            // this.tipDog();
         }
     }
 </script>
