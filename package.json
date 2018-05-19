@@ -13,7 +13,8 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "^1.0.0"
+    "nuxt": "^1.0.0",
+    "rehive": "git+https://github.com/rehive/rehive-javascript.git"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
