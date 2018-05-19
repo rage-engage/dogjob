@@ -1,29 +1,30 @@
 <template>
-  <section class="flex">
-      <h1 class="mainHeader">Space Station</h1>
-      <h2 class="subHeader">Dogs</h2>
-      <div class="container">
-          <div class="wrapper">
-              <ul class="dog">
-                  <li><img class="image" src="../assets/DogJog.png" alt=""></li>
-                  <li><p>Dog Name: Name</p></li>
-                  <li><p>Description: Dog is a good boy</p></li>
-                  <li><p>Breed: Dog</p></li>
-                  <li><input type="number" placeholder="Amount"></li>
-                  <li><button class="button2" type="submit">Submit</button></li>
-                  <div id="myProgress">
-                    <div id="myBar"></div>
-                  </div>
-              </ul>
+  <div class="add-dog">
+    <section class="flex">
+        <h1 class="mainHeader">Space Station</h1>
+        <h2 class="subHeader">Dogs</h2>
+        <div class="container">
+            <div class="wrapper">
+                <ul class="dog">
+                    <li><img class="image" src="../assets/DogJog.png" alt=""></li>
+                    <li><p>Dog Name: Name</p></li>
+                    <li><p>Description: Dog is a good boy</p></li>
+                    <li><p>Breed: Dog</p></li>
+                    <li><input type="number" placeholder="Amount"></li>
+                    <li><button class="button2" type="submit">Submit</button></li>
+                    <div id="myProgress">
+                      <div id="myBar"></div>
+                    </div>
+                </ul>
 
-          </div>
-      </div>
+            </div>
+        </div>
+    </section>
+    <div class="logo-div" align="right">
+      <img src="../assets/logo2.png" alt="" class="logo">
+    </div>
+  </div>
 
-      <div class="logo-div" align="right">
-        <img src="../assets/DogJog.png" alt="" class="logo">
-      </div>
-
-  </section>
 </template>
 
 <script>
@@ -40,12 +41,19 @@ export default {
 </script>
 
 <style>
+
+.add-dog{
+  min-height: 75vh;
+}
 .logo{
   height: 70px;
   width: 70px;
-  margin: 1%;
+  margin-right: 1%;
 }
 
+.logo-div{
+  margin-left: 1%;
+}
 .header-flex{
   display: flex;
   justify-content: flex-start;
