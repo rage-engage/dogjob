@@ -4,27 +4,65 @@
       <div class="form">
         <form class="" action="index.html" method="post">
           <label for="">First Name</label>
-          <input class="input" type="text" name="" id="firstName">
+          <input class="input" v-model="first_name" type="text" name="" id="firstName">
           <label for="">Last Name</label>
-          <input class="input" type="text" name="" id="lastName">
+          <input class="input" v-model="last_name" type="text" name="" id="lastName">
           <label for="">E-mail Address</label>
-          <input class="input" type="text" name="" id="email">
+          <input class="input" v-model="email" type="text" name="" id="email">
           <label for="">Password</label>
-          <input class="input" type="text" name="" id="password">
-          <button class="button" type="button" name="button">Register</button>
-          </form>
+          <input class="input" v-model="password1" type="text" name="" id="password" placeholder="Password must have at least 8 charachters">
+          <label for="">Confirm Password</label>
+          <input class="input" v-model="password2" type="text" name="" id="password" placeholder="Password must have at least 8 charachters">
+          <button class="button" type="button" name="button" @click="register">Register</button>
+        </form>
       </div>
   </section>
 </template>
 
 <script>
+import Rehive from 'rehive';
+
+const rehive = new Rehive({storageMethod: 'local'});
+
+
 
 export default {
-  
+  data: function() {
+    return {
+      first_name: '',
+      last_name: '',
+      email: '',
+      password1: '',
+      password2: '',
+    }
+  },
+  methods: {
+    register: function() {
+      console.log('rehive is', rehive);
+      rehive.auth.register({
+        first_name: this.first_name,
+        last_name: this.last_name,
+        email: this.email,
+        password1: this.password1,
+        password2: this.password2,
+        company: 'dogjob'
+      }).then(function(user){
+          console.log('user is', user);
+      },function(err){
+          console.log('oh no something went wrong', err);
+      })
+    }
+  },
 }
+
 </script>
 
 <style>
+
+#password {
+  font-size: 12px;
+}
+
 .flex {
   display: flex;
   flex-direction: column;
