@@ -40,19 +40,17 @@ export default {
   },
   methods: {
     login: function() {
-      console.log('rehive is', rehive);
-      const self = this;
       rehive.auth.login({
           user: this.email,
           company: "dogjob",
           password: this.password
-      }).then(function(user){
+      }).then((user) => {
           console.log('user is', user);
-
-      },function(err){
+          this.$router.push({ path: `/dashboard` });
+      },(err) =>{
           console.log('oh no something went wrong',err);
-          self.error.status = true;
-          self.error.msg = "Invalid login";
+          this.error.status = true;
+          this.error.msg = "Invalid login";
       })
     }
   }
