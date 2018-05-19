@@ -118,6 +118,7 @@ ul li {
 
 .dog img {
     height: 170px;
+    border-radius: 50%;
 }
 
 .header{
