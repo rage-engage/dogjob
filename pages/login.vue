@@ -116,7 +116,7 @@ export default {
 
 .error{
   margin-top: 5%;
-  background: FIREBRICK;
+  background: #f28585;
   color: WHITE;
   padding: 10px;
   border-radius: 3px;
