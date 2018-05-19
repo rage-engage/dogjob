@@ -104,7 +104,7 @@ body{
 .wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    margin: 60px;
+    margin: 60px 130px;
     justify-items: center;
     text-align: center;
     grid-gap: 10px;
@@ -115,6 +115,10 @@ ul li {
     list-style: none;
 }
 
+.dog {
+  background-color: #efefef;
+  padding: 150px;
+}
 
 .dog img {
     height: 170px;
