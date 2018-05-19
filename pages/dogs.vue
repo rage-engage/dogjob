@@ -24,14 +24,29 @@
                     }
                 }).then((res) => {
                     this.dogs = res.results;
+                    console.log('res is', res);
                 }, function (err) {
                     console.log('an error occured', err);
                 });
+            },
+            tipDog: function() {
+                rehive.transactions.createTransfer(
+                {
+                    amount: 100,
+                    recipient: "7660da2d-097a-410a-9089-bfbf72629fd9",
+                    currency: "ZAR"
+                }).then(function(res){
+                    console.log('tip successful');
+                },(err) => {
+                    console.log('an error occured doing the transfer', err);
+                    alert('An error occured');
+                })
             }
         },
         created() {
             console.log('hello');
             this.getDogs();
+            this.tipDog();
         }
     }
 </script>
