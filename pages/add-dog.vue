@@ -1,6 +1,6 @@
 <template>
   <section class="flex">
-      <h1 class="header">Space Station</h1>
+      <h1 class="mainHeader">Space Station</h1>
       <h2 class="subHeader">Dogs</h2>
       <div class="container">
           <div class="wrapper">
@@ -131,7 +131,7 @@ ul li {
     height: 170px;
 }
 
-.header{
+.mainHeader{
   font-family: sans-serif;
   font-weight: 400;
   font-size: 2.0em;
