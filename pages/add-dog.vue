@@ -11,7 +11,7 @@
                     <!-- <li><p>Description: Dog is a good boy</p></li>
                     <li><p>Breed: Dog</p></li> -->
                     <li><input type="number" placeholder="Amount"></li>
-                    <li><button class="button2" type="submit">Submit</button></li>
+                    <li><button class="button2" type="submit" @click="addDog()">Submit</button></li>
 
                     <div class='figure'></div>
                     <!-- <div id="myProgress">
@@ -32,7 +32,7 @@
 <script>
 import Rehive from 'rehive';
 
-const rehive = new Rehive({storageMethod: 'local'});
+const rehiveAdmin = new Rehive({apiToken: '5118a45f37886966747bec5e385c4884364f277de77a30de2da31b93f3f2a3e8'});
 
 export default {
   data: function(){
@@ -41,8 +41,14 @@ export default {
     }
   },
   methods: {
-    dogProgress(){
-
+    addDog() {
+      let formData = new FormData;
+      rehiveAdmin.admin.users.create({'first_name': 'woof', 'metadata': {'type': 'dog'}}).then((res) => {
+        console.log('res is ', res)
+      }, (err) => {
+        console.log('An error occured while adding a dog', err);
+        alert('Could not add a dog');
+      });
     }
   }
 
