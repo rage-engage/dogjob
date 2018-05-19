@@ -10,11 +10,10 @@
                       <img src="" alt="" class="image">
                     </li>
                     <li><p>Dog Name: {{ dog.first_name }}</p></li>
-                    <li><input type="number" placeholder="Amount"></li>
-                    <li><button class="button2" type="submit">Submit</button></li>
-
+                    <!-- <li><input type="number" placeholder="Amount"></li> -->
+                    <li><button class="button2" type="submit" @click="tipDog(dog.id, 500)">Tip R5</button></li>
+                    <li><button class="button2" type="submit" @click="tipDog(dog.id, 1000)">Tip R10</button></li>
                     <div class='figure'></div>
-    
                 </ul>
 
             </div>
@@ -30,6 +29,7 @@
     import Rehive from 'rehive';
 
     const rehive = new Rehive({storageMethod: 'local'});
+    const rehiveAdmin = new Rehive({apiToken: '5118a45f37886966747bec5e385c4884364f277de77a30de2da31b93f3f2a3e8'});
     export default {
         data: function() {
             return {
@@ -38,7 +38,7 @@
         },
         methods: {
             getDogs: function() {
-                rehive.admin.users.get({
+                rehiveAdmin.admin.users.get({
                     filters: {
                         metadata__type: 'dog'
                     }
@@ -49,13 +49,14 @@
                     console.log('an error occured', err);
                 });
             },
-            tipDog: function() {
+            tipDog: function(id, amount) {
                 rehive.transactions.createTransfer(
                 {
-                    amount: 100,
-                    recipient: "7660da2d-097a-410a-9089-bfbf72629fd9",
+                    amount: amount,
+                    recipient: id,
                     currency: "ZAR"
                 }).then(function(res){
+                    alert('tip succesful');
                     console.log('tip successful');
                 },(err) => {
                     console.log('an error occured doing the transfer', err);
@@ -172,11 +173,13 @@ ul li {
 .figure {
   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/57786/dog-walk.svg") no-repeat;
   width: 220px;
-  height: 266px;
-  transform: translate3D(200px, 50px, 0);
+  /* height: 266px; */
+  height: 260px;
+  /* transform: translate3D(200px, 50px, 0); */
+  transform: translate3D(50px, 50px, 0);
   /* the walking animation */
   animation: walk 0.78s steps(9) infinite;
-  transform: translateZ(0);
+  /* transform: translateZ(0); */
   backface-visibility: hidden;
 }
 .no-svg .figure {
