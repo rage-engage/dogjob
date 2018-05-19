@@ -16,20 +16,7 @@
                   <li><p>{{group.description}}</p></li>
                   <li>  <nuxt-link to="/dogs"> <button class="button" type="submit">View Dogs</button> </nuxt-link></li>
               </ul>
-
-              <!-- <ul class="dog">
-                  <li><img class="image" src="../assets/Ss.jpg" alt=""></li>
-                  <li><p>Space Station</p></li>
-                  <li><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis</p></li>
-                  <li>  <nuxt-link to="/add-dog"> <button class="button" type="submit">View Dogs</button> </nuxt-link></li>
-              </ul>
-
-              <ul class="dog">
-                  <li><img class="image" src="../assets/Ss.jpg" alt=""></li>
-                  <li><p>Space Station</p></li>
-                  <li><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis</p></li>
-                  <li>  <nuxt-link to="/add-dog"> <button class="button" type="submit">View Dogs</button> </nuxt-link></li>
-              </ul> -->
+              
           </div>
       </div>
 
