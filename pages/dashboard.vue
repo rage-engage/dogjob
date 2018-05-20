@@ -146,7 +146,6 @@ ul li {
 
 .dog {
   background-color: #efefef;
-  padding: 150px;
 }
 
 .dog img {
