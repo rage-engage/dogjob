@@ -1,5 +1,7 @@
 <template>
   <div class="">
+
+    <app-navbar></app-navbar>
     <section class="flex">
       <h1 class="header">Add Dog</h1>
         <div class="form">
@@ -19,6 +21,7 @@
 </template>
 
 <script>
+import navBar from './components/navbar'
 import Rehive from 'rehive';
 
 const rehiveAdmin = new Rehive({apiToken: '5118a45f37886966747bec5e385c4884364f277de77a30de2da31b93f3f2a3e8'});
@@ -39,6 +42,9 @@ export default {
         alert('Could not add a dog');
       });
     }
+  },
+  components: {
+    appNavbar:  navBar
   }
 
 }

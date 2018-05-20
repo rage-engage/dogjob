@@ -1,5 +1,6 @@
 <template>
   <section class="dashboard">
+      <app-navbar></app-navbar>
     <div class="header" align="center">
         <div class="title">
           <h1 class="the-h1">Welcome, Space Station</h1>
@@ -30,7 +31,7 @@
 </template>
 
 <script>
-
+import navBar from './components/navbar'
 import Rehive from 'rehive';
 
 const rehive = new Rehive({storageMethod: 'local'});
@@ -72,6 +73,9 @@ export default {
         console.log('hello');
         this.getDogs();
         // this.tipDog();
+    },
+    components: {
+      appNavbar:  navBar
     }
 }
 </script>
