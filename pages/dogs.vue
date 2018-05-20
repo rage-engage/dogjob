@@ -1,8 +1,9 @@
 <template>
   <div class="add-dog">
+        <app-navbar></app-navbar>
     <section class="flex">
       <div class="" align="center">
-        <h1 class="the-h1">Space Station</h1>
+        <h1 class="the-h1" style="margin-top: 5%">Space Station</h1>
         <h2 class="subHeader">Dogs</h2>
       </div>
 
@@ -12,7 +13,7 @@
                 <ul class="dog" v-for="dog in dogs" :key="dog.first_name">
                     <li><img class="image" :src="dog.profile" alt="">
                     </li>
-                    <li><p>Dog Name: {{ dog.first_name }}</p></li>
+                    <li><p class="dogName">{{ dog.first_name }}</p></li>
                     <!-- <li><input type="number" placeholder="Amount"></li> -->
                     <li><button class="button2" type="submit" @click="tipDog(dog.id, 500)">Tip R5</button></li>
                     <li><button class="button2" type="submit" @click="tipDog(dog.id, 1000)">Tip R10</button></li>
@@ -29,6 +30,7 @@
 </template>
 
 <script>
+    import navBar from './components/navbar'
     import Rehive from 'rehive';
 
     const rehive = new Rehive({storageMethod: 'local'});
@@ -104,12 +106,18 @@
         created() {
             this.getDogs();
             // this.tipDog();
+        },
+        components: {
+          appNavbar:  navBar
         }
     }
 </script>
 
 <style>
-
+.dogName{
+  font-size: 1.8em;
+  font-weight: 300;
+}
 .the-h1{
   font-weight: 100;
   font-size: 3em;
@@ -180,7 +188,8 @@ ul li {
 @media only screen and (max-width: 600px){
   .dog {
     background-color: #eff2f1;
-
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 }
 
@@ -238,6 +247,13 @@ ul li {
   /* transform: translateZ(0); */
   backface-visibility: hidden;
 }
+
+@media only screen and (max-width: 600px){
+  .figure{
+    margin-right: 87px;
+  }
+}
+
 .no-svg .figure {
   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/57786/dog-walk.png");
 }

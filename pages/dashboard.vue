@@ -1,5 +1,6 @@
 <template>
   <section class="dashboard">
+      <app-navbar></app-navbar>
     <div class="header" align="center">
         <div class="title">
           <h1 class="the-h1">Welcome, Space Station</h1>
@@ -30,7 +31,7 @@
 </template>
 
 <script>
-
+import navBar from './components/navbar'
 import Rehive from 'rehive';
 
 const rehive = new Rehive({storageMethod: 'local'});
@@ -72,6 +73,9 @@ export default {
         console.log('hello');
         this.getDogs();
         // this.tipDog();
+    },
+    components: {
+      appNavbar:  navBar
     }
 }
 </script>
@@ -99,7 +103,7 @@ body{
   margin-left: 1%;
 }
 .dog{
-  padding: 0;
+  padding: 50px !important;
   background-color: #eff2f1;
   border-radius: 5%;
 }
@@ -126,7 +130,7 @@ body{
 .wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    margin: 60px 130px;
+    margin: 60px;
     justify-items: center;
     text-align: center;
     grid-gap: 10px;
@@ -146,11 +150,10 @@ ul li {
 
 .dog {
   background-color: #efefef;
-  padding: 150px;
 }
 
 .dog img {
-    height: 170px;
+    height: 200px;
     border-radius: 50%;
 }
 
