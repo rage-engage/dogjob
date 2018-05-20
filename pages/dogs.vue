@@ -13,11 +13,14 @@
                     <li><img class="image" :src="dog.profile" alt="">
                     </li>
                     <li><p>Dog Name: {{ dog.first_name }}</p></li>
-                    <li><input type="number" placeholder="Amount"></li>
-                    <li><button class="button2" type="submit">Submit</button></li>
-
+                    <!-- <li><input type="number" placeholder="Amount"></li> -->
+                    <li><button class="button2" type="submit" @click="tipDog(dog.id, 500)">Tip R5</button></li>
+                    <li><button class="button2" type="submit" @click="tipDog(dog.id, 1000)">Tip R10</button></li>
                     <div class='figure'></div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> be8224db47db5c0a171277faa478e9175a2b7578
                 </ul>
 
             </div>
@@ -53,13 +56,14 @@
                     console.log('an error occured', err);
                 });
             },
-            tipDog: function() {
+            tipDog: function(id, amount) {
                 rehive.transactions.createTransfer(
                 {
-                    amount: 100,
-                    recipient: "7660da2d-097a-410a-9089-bfbf72629fd9",
+                    amount: amount,
+                    recipient: id,
                     currency: "ZAR"
                 }).then(function(res){
+                    alert('tip succesful');
                     console.log('tip successful');
                 },(err) => {
                     console.log('an error occured doing the transfer', err);
@@ -142,6 +146,7 @@ ul li {
 
 .dog {
     padding-left: 0px;
+    padding: 80px;
 }
 @media only screen and (max-width: 600px){
   .dog {
@@ -195,11 +200,13 @@ ul li {
 .figure {
   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/57786/dog-walk.svg") no-repeat;
   width: 220px;
-  height: 266px;
-  transform: translate3D(200px, 50px, 0);
+  /* height: 266px; */
+  height: 360px;
+  /* transform: translate3D(200px, 50px, 0); */
+  transform: translate3D(50px, 50px, 0);
   /* the walking animation */
   animation: walk 0.78s steps(9) infinite;
-  transform: translateZ(0);
+  /* transform: translateZ(0); */
   backface-visibility: hidden;
 }
 .no-svg .figure {
