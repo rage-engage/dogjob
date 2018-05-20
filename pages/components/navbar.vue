@@ -6,6 +6,7 @@
         <nuxt-link to="../organisation"><li>Organisations</li></nuxt-link>
         <nuxt-link to="../dogs"><li>Dogs</li></nuxt-link>
         <nuxt-link to="../dashboard"><li>Dashboard</li></nuxt-link>
+        <nuxt-link to="/"><li>Logout</li></nuxt-link>
       </ul>
     </nav>
   </div>
