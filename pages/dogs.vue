@@ -17,8 +17,7 @@
                     <!-- <li><input type="number" placeholder="Amount"></li> -->
                     <li><button class="button2" type="submit" @click="tipDog(dog.id, 500)">Tip R5</button></li>
                     <li><button class="button2" type="submit" @click="tipDog(dog.id, 1000)">Tip R10</button></li>
-                    <div class='figure'></div>
-                    <p>{{ dog.amount }} / 100</p>
+                    <div class='figure' v-bind:style="{ 'animation-duration': calcDuration(dog)}"></div>
                 </ul>
 
             </div>
@@ -50,8 +49,25 @@
                     }
                 }).then((res) => {
                     this.dogs = res.results;
-                    console.log('res is', res);
+                    return true;
                 }, function (err) {
+                    console.log('an error occured', err);
+                }).then((res) => {
+                    // Loop over each dog and get the balance
+                    for (const dog of this.dogs) {
+                        //https://api.rehive.com/3/admin/accounts/?user=3d80bc5d-dbe6-40d0-98d2-02a7de238e10
+                        rehiveAdmin.admin.accounts.get({
+                            filters: {
+                                user: dog.id
+                            }
+                        }).then((res) => {
+                            dog.balance = res.results[0].currencies[0].available_balance;
+                            this.calcDuration(dog);
+                        }, (err) => {
+                            console.log('an error occured getting that dogs details', err);
+                        });
+                    }
+                }, (err) => {
                     console.log('an error occured', err);
                 });
             },
@@ -68,10 +84,26 @@
                     console.log('an error occured doing the transfer', err);
                     alert('An error occured');
                 })
+            },
+            calcDuration(dog) {
+                // Does the dog have a balance?
+                console.log('dogs!!', dog);
+                if (!dog.balance) {
+                    return `0.78s`;
+                }
+                // If we say R100 which is 10000cents is needed to walk a dog
+                // We need to work out the % complete.
+                const completePerc = dog.balance / 10000 * 100;
+
+                // Upper limits 0.78s lower limits 0.4s
+                // 1000 ms = 1s
+                let animationTime = 1000 - (completePerc * 10);
+                // Add in our lower animation limit incase funding is complete and the dog is executing at 0s
+                animationTime = animationTime + 400;
+                return `${animationTime}ms`;
             }
         },
         created() {
-            console.log('hello');
             this.getDogs();
             // this.tipDog();
         },
