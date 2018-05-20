@@ -5,9 +5,9 @@
       <!-- <h1 class="title">
         Dog Jog
       </h1> -->
-      <h2 class="subtitle">
+      <!-- <h2 class="subtitle">
         Help dog shelters walk their dogs
-      </h2>
+      </h2> -->
       <div class="links">
         <nuxt-link to="./login" class="button--green">Login</nuxt-link>
       </div>
@@ -25,6 +25,13 @@ export default {
 .test{
   height: 400px;
   width: 400px;
+}
+
+@media only screen and (max-width: 600px){
+  .test {
+    width: 100%;
+    height: auto;
+  }
 }
 .container {
   min-height: 100vh;

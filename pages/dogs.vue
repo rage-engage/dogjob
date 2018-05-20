@@ -1,20 +1,23 @@
 <template>
   <div class="add-dog">
     <section class="flex">
-        <h1 class="mainHeader">Space Station</h1>
+      <div class="" align="center">
+        <h1 class="the-h1">Space Station</h1>
         <h2 class="subHeader">Dogs</h2>
+      </div>
+
         <div class="container">
             <div class="wrapper">
+
                 <ul class="dog" v-for="dog in dogs" :key="dog.first_name">
-                    <li><img class="image" src="../assets/DogJog.png" alt="">
-                      <img src="" alt="" class="image">
+                    <li><img class="image" :src="dog.profile" alt="">
                     </li>
                     <li><p>Dog Name: {{ dog.first_name }}</p></li>
                     <li><input type="number" placeholder="Amount"></li>
                     <li><button class="button2" type="submit">Submit</button></li>
 
                     <div class='figure'></div>
-    
+
                 </ul>
 
             </div>
@@ -30,6 +33,7 @@
     import Rehive from 'rehive';
 
     const rehive = new Rehive({storageMethod: 'local'});
+    const rehiveAdmin = new Rehive({apiToken: '5118a45f37886966747bec5e385c4884364f277de77a30de2da31b93f3f2a3e8'});
     export default {
         data: function() {
             return {
@@ -38,7 +42,7 @@
         },
         methods: {
             getDogs: function() {
-                rehive.admin.users.get({
+                rehiveAdmin.admin.users.get({
                     filters: {
                         metadata__type: 'dog'
                     }
@@ -72,6 +76,17 @@
 </script>
 
 <style>
+
+.the-h1{
+  font-weight: 100;
+  font-size: 3em;
+}
+
+.image{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
 
 .add-dog{
   min-height: 75vh;
@@ -113,6 +128,12 @@
     text-align: center;
     grid-gap: 10px;
 }
+@media only screen and (max-width: 600px){
+  .wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 
 ul li {
     padding: 10px;
@@ -122,9 +143,11 @@ ul li {
 .dog {
     padding-left: 0px;
 }
+@media only screen and (max-width: 600px){
+  .dog {
+    background-color: #eff2f1;
 
-.dog img {
-    height: 170px;
+  }
 }
 
 .mainHeader{

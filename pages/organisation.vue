@@ -2,24 +2,21 @@
   <section class="dashboard">
     <div class="header" align="center">
         <div class="title">
-          <h1 class="the-h1">Welcome, Space Station</h1>
+          <h1 class="the-h1">Organisations</h1>
         </div>
 
-    </div>
-    <div class="" align="center" style="margin-top: 3%;">
-      <nuxt-link to="./add-dog"><button class="button"> <i class="fas fa-plus"></i> Add dog</button></nuxt-link>
     </div>
 
       <div class="container">
           <div class="wrapper">
-              <ul class="dog" v-for="dog in dogs" :key="dog.first_name">
-                  <li><img class="image" :src="dog.profile" alt=""></li>
-                  <li><p>{{dog.first_name}}</p></li>
-                  <li>
-                    <nuxt-link to="./edit-dog"><button class="button" type="submit" style="background-color: #8cd162; margin-right: 7%"><i class="fas fa-pencil-alt"></i></button></nuxt-link>
-                    <button class="button" type="submit" style="background-color: #d16262"><i class="fas fa-trash-alt"></i></button>
-                    </li>
+
+              <ul class="dog" v-for="group in groups" :key="group.name">
+                  <li><img class="image" src="../assets/DogJog.png" alt=""></li>
+                  <li><p>{{group.name}}</p></li>
+                  <li><p>{{group.description}}</p></li>
+                  <li>  <nuxt-link to="/dogs"> <button class="button" type="submit">View Dogs</button> </nuxt-link></li>
               </ul>
+
           </div>
       </div>
 
@@ -35,53 +32,45 @@ import Rehive from 'rehive';
 
 const rehive = new Rehive({storageMethod: 'local'});
 const rehiveAdmin = new Rehive({apiToken: '5118a45f37886966747bec5e385c4884364f277de77a30de2da31b93f3f2a3e8'});
+
 export default {
-    data: function() {
-        return {
-            dogs: [],
-        }
-    },
-    methods: {
-        getDogs: function() {
-            rehiveAdmin.admin.users.get({
-                filters: {
-                    metadata__type: 'dog'
-                }
-            }).then((res) => {
-                this.dogs = res.results;
-                console.log('res is', res);
-            }, function (err) {
-                console.log('an error occured', err);
-            });
-        },
-        tipDog: function() {
-            rehive.transactions.createTransfer(
-            {
-                amount: 100,
-                recipient: "7660da2d-097a-410a-9089-bfbf72629fd9",
-                currency: "ZAR"
-            }).then(function(res){
-                console.log('tip successful');
-            },(err) => {
-                console.log('an error occured doing the transfer', err);
-                alert('An error occured');
-            })
-        }
-    },
-    created() {
-        console.log('hello');
-        this.getDogs();
-        // this.tipDog();
+  data: function(){
+    return {
+      groups: [],
     }
+  },
+  methods: {
+    getGroups: function() {
+      rehiveAdmin.admin.groups.get().then((res) => {
+        // Get all the groups, ignore user, service and admin
+        const blackListGroups = ['user', 'service', 'admin'];
+        for (const group of res.results) {
+          // If the group is not blacklisted
+          if (!blackListGroups.includes(group.name)) {
+            this.groups.push(group);
+          }
+        }
+      }, (err) => {
+        console.log('Oh no an error occured when getting the groups', err);
+        alert('Oh no an error occured when getting the groups');
+      });
+    },
+    getRoute(name) {
+      return `/organisation/${name}`;
+    }
+  },
+  created() {
+    this.getGroups();
+  }
 }
 </script>
 
 <style>
 
+
 body{
   font-family: sans-serif;
 }
-
 
 .image{
   height: 200px;
@@ -98,11 +87,7 @@ body{
 .logo-div{
   margin-left: 1%;
 }
-.dog{
-  padding: 0;
-  background-color: #eff2f1;
-  border-radius: 5%;
-}
+
 .header-flex{
   display: flex;
   justify-content: flex-start;
@@ -131,7 +116,6 @@ body{
     text-align: center;
     grid-gap: 10px;
 }
-
 @media only screen and (max-width: 600px){
   .wrapper {
     margin-left: 0;
@@ -142,6 +126,11 @@ body{
 ul li {
     padding: 10px;
     list-style: none;
+}
+@media only screen and (max-width: 600px){
+  ul {
+    padding-left: 0;
+  }
 }
 
 .header{

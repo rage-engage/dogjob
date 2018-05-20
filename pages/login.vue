@@ -82,6 +82,13 @@ export default {
   border-radius: 5%;
 }
 
+@media only screen and (max-width: 600px){
+  .form {
+    padding-left: 0;
+    padding-right: 0;
+    width: 80%;
+  }
+}
 .input {
   width: 100%;
   font-size: 15px;
