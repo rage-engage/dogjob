@@ -99,7 +99,7 @@ body{
   margin-left: 1%;
 }
 .dog{
-  padding: 0;
+  padding: 50px !important;
   background-color: #eff2f1;
   border-radius: 5%;
 }
@@ -126,7 +126,7 @@ body{
 .wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    margin: 60px 130px;
+    margin: 60px;
     justify-items: center;
     text-align: center;
     grid-gap: 10px;
@@ -150,7 +150,7 @@ ul li {
 }
 
 .dog img {
-    height: 170px;
+    height: 200px;
     border-radius: 50%;
 }
 
