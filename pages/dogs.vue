@@ -100,6 +100,13 @@
 .add-dog{
   min-height: 75vh;
 }
+
+@media only screen and (max-width: 600px){
+  .add-dog {
+    overflow-x: hidden;
+  }
+}
+
 .logo{
   height: 70px;
   width: 70px;
