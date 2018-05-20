@@ -48,7 +48,11 @@
                         metadata__type: 'dog'
                     }
                 }).then((res) => {
-                    this.dogs = res.results;
+                    // this.dogs = res.results;
+                    for (const dog of res.results) {
+                        dog.balance = 0;
+                        this.dogs.push(dog);
+                    }
                     return true;
                 }, function (err) {
                     console.log('an error occured', err);
@@ -87,7 +91,6 @@
             },
             calcDuration(dog) {
                 // Does the dog have a balance?
-                console.log('dogs!!', dog);
                 if (!dog.balance) {
                     return `0.78s`;
                 }
@@ -254,7 +257,7 @@ ul li {
   }
 }
 
-.no-svg .figure {
+    .no-svg .figure {
   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/57786/dog-walk.png");
 }
 
