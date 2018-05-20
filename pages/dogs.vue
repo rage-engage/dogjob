@@ -17,10 +17,6 @@
                     <li><button class="button2" type="submit" @click="tipDog(dog.id, 500)">Tip R5</button></li>
                     <li><button class="button2" type="submit" @click="tipDog(dog.id, 1000)">Tip R10</button></li>
                     <div class='figure'></div>
-<<<<<<< HEAD
-
-=======
->>>>>>> be8224db47db5c0a171277faa478e9175a2b7578
                 </ul>
 
             </div>
