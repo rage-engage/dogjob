@@ -163,6 +163,11 @@ ul li {
   font-size: 2.0em;
   margin-top: 20px;
 }
+@media only screen and (max-width: 600px){
+  .header {
+    font-size: 1em;
+  }
+}
 
 .subHeader {
     font-family: sans-serif;
@@ -192,6 +197,8 @@ ul li {
   font-weight: 100;
   font-size: 1.5em;
 }
+
+
 
 .header{
   grid-area: header;

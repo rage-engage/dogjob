@@ -2,12 +2,6 @@
   <section class="container">
     <div>
       <img src="../assets/logo.png" alt="" class="test">
-      <!-- <h1 class="title">
-        Dog Jog
-      </h1> -->
-      <!-- <h2 class="subtitle">
-        Help dog shelters walk their dogs
-      </h2> -->
       <div class="links">
         <nuxt-link to="./login" class="button--green">Login</nuxt-link>
       </div>
