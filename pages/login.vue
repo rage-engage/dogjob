@@ -20,7 +20,7 @@
           </form>
         </div>
     </section>
-        <footer>
+    <footer>
       <div class="footer-image"></div>
       <div class="footer-wrapper">
         <div class="footer-logo-wrapper"><img src="../../dogjob/assets/logo2.png" alt=""></div>
