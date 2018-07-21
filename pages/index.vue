@@ -3,7 +3,7 @@
   <section class="container">
     <div class="left-wrapper">
       <div class="welcome">
-        <h1>Welcome</h1>
+        <h1>Welcome, to DogJog</h1>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, ipsa!</p>
       </div>
       <div class="icon-wrapper">
@@ -136,7 +136,9 @@ export default {
 .button--green {
   width: 70%;
   border-radius: 0px;
+  transition: all 400ms ease-in-out;
 }
+
 /* Footer */
 .footer-image {
   background-image: url("../../dogjob/assets/Rectangle_2.png");

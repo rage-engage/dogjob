@@ -64,7 +64,7 @@ export default {
 
 .header{
   font-family: sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 2.0em;
 }
 
@@ -104,6 +104,7 @@ export default {
   background-color: #80CBC4;
   cursor: pointer;
   width: 100%;
+  transition: all 400ms ease-in-out;
 }
 
 .button:hover {

@@ -247,6 +247,7 @@ ul li {
   background-color: #80CBC4;
   cursor: pointer;
   width: 20%;
+  transition: all 400ms ease-in-out;
 }
 
 .button:hover {
