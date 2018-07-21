@@ -20,6 +20,24 @@
           </form>
         </div>
     </section>
+        <footer>
+      <div class="footer-image"></div>
+      <div class="footer-wrapper">
+        <div class="footer-logo-wrapper"><img src="../../dogjob/assets/logo2.png" alt=""></div>
+        <div class="footer-text-blocks">
+          <div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus doloremque repellat harum! Saepe porro distinctio exercitationem veritatis, delectus, accusantium quasi natus totam nostrum tempore repellat labore repellendus rem ad consequatur!</p>
+          </div>
+          <div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus doloremque repellat harum! Saepe porro distinctio exercitationem veritatis, delectus, accusantium quasi natus totam nostrum tempore repellat labore repellendus rem ad consequatur!</p>
+          </div>
+          <div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus doloremque repellat harum! Saepe porro distinctio exercitationem veritatis, delectus, accusantium quasi natus totam nostrum tempore repellat labore repellendus rem ad consequatur!</p>
+          </div> 
+      </div>
+      </div>
+
+    </footer>
   </div>
 </template>
 
@@ -73,7 +91,8 @@ export default {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  height: auto;
+  padding: 4em;
 }
 
 .header{
@@ -86,7 +105,7 @@ export default {
   width: 30%;
   height: auto;
   background-color: white;
-  margin: 3% auto 100px;
+  /* margin: 3% auto 100px; */
   padding: 45px;
   border-radius: 5%;
 }
@@ -137,4 +156,47 @@ export default {
   padding: 10px;
   border-radius: 3px;
 }
+
+/* Footer */
+.footer-image {
+  background-image: url("../../dogjob/assets/Rectangle_2.png");
+  background-repeat: no-repeat;
+  height: 5.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-logo-wrapper {
+  align-self: center;
+}
+
+.footer-wrapper img {
+  width: 50px;
+  align-self: center;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  background: #80CBC4;
+  width: 100%;
+  height: auto;
+  margin-top: -1px;
+}
+
+.footer-text-blocks {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 90%;
+  margin-top: 1em;
+}
+
+.footer-text-blocks p {
+  padding: 1em;
+  color: white;
+  margin-bottom: 2em;
+}
+
 </style>
