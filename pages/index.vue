@@ -21,7 +21,7 @@
         </div>
         <div class="icon">
           <i class="fas fa-heart fa-5x"></i>
-          <p>Supports the Shelter</p>
+          <p>Love to Dogs</p>
         </div>
       </div>
     </div>
