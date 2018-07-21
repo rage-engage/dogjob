@@ -1,7 +1,6 @@
 <template>
   <div class="">
     <app-navbar></app-navbar>
-
     <section class="flex">
       <h1 class="header">Login</h1>
         <div class="form">
@@ -55,7 +54,10 @@ export default {
           this.error.msg = "Invalid login";
       })
     }
-  }
+  },
+  components: {
+  appNavbar:  navBar
+}
 }
 
 </script>
@@ -76,7 +78,7 @@ export default {
 
 .header{
   font-family: sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 2.0em;
 }
 
@@ -106,8 +108,9 @@ export default {
 }
 
 .button {
+  width: 100%;
   padding: 10px 10px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   font-family: sans-serif;
   font-size: 1.0em;
   color: #FFF;
