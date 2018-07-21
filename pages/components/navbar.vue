@@ -3,10 +3,15 @@
     <nav>
       <div class="handle" @click="show = !show"><i style="font-size:1.7em; color:white" class="fas fa-bars"></i></div>
       <ul v-bind:class="{showing: show}">
-        <nuxt-link to="../organisation"><li>Organisations</li></nuxt-link>
-        <nuxt-link to="../dogs"><li>Dogs</li></nuxt-link>
-        <nuxt-link to="../dashboard"><li>Dashboard</li></nuxt-link>
-        <nuxt-link to="/"><li>Logout</li></nuxt-link>
+        <div class="nav-logo-wrapper">
+          <div class="nav-logo"><img src="../../assets/logo2.png"></div>
+        </div>
+        <div class="nav-menue">
+          <nuxt-link to="../organisation"><li>Organisations</li></nuxt-link>
+          <nuxt-link to="../dogs"><li>Dogs</li></nuxt-link>
+          <nuxt-link to="../dashboard"><li>Dashboard</li></nuxt-link>
+          <nuxt-link to="/"><li>Logout</li></nuxt-link>
+        </div>
       </ul>
     </nav>
   </div>
@@ -25,7 +30,27 @@ export default {
 
 <style lang="css">
 
+.nav-logo img {
+  width: 70px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo-wrapper {
+  width: 50%;
+  display: flex;
+}
+
+.nav-menue {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
 nav ul{
+  display: flex;
+  justify-content: center;
   background: #80CBC4;
   overflow: hidden;
   padding: 0;

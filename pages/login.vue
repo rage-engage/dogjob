@@ -1,5 +1,7 @@
 <template>
   <div class="">
+    <app-navbar></app-navbar>
+
     <section class="flex">
       <h1 class="header">Login</h1>
         <div class="form">
@@ -23,6 +25,7 @@
 </template>
 
 <script>
+import navBar from './components/navbar'
 import Rehive from 'rehive';
 
 const rehive = new Rehive({storageMethod: 'local'});
@@ -56,6 +59,10 @@ export default {
 }
 
 </script>
+
+<style scoped>
+
+</style>
 
 <style>
 .flex {
