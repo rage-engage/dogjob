@@ -23,10 +23,23 @@
               </ul>
           </div>
       </div>
-
-      <div class="logo-div" align="right">
-        <img src="../assets/logo2.png" alt="" class="logo">
-      </div>
+      <footer>
+        <div class="footer-image"></div>
+          <div class="footer-wrapper">
+            <div class="footer-logo-wrapper"><img src="../../dogjob/assets/logo2.png" alt=""></div>
+            <div class="footer-text-blocks">
+              <div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus doloremque repellat harum! Saepe porro distinctio exercitationem veritatis, delectus, accusantium quasi natus totam nostrum tempore repellat labore repellendus rem ad consequatur!</p>
+              </div>
+              <div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus doloremque repellat harum! Saepe porro distinctio exercitationem veritatis, delectus, accusantium quasi natus totam nostrum tempore repellat labore repellendus rem ad consequatur!</p>
+              </div>
+              <div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus doloremque repellat harum! Saepe porro distinctio exercitationem veritatis, delectus, accusantium quasi natus totam nostrum tempore repellat labore repellendus rem ad consequatur!</p>
+              </div> 
+          </div>
+        </div>
+    </footer>
   </section>
 </template>
 
@@ -102,11 +115,19 @@ body{
 .logo-div{
   margin-left: 1%;
 }
-.dog{
-  padding: 50px !important;
+
+.dog {
+  padding: 1em;
   background-color: #eff2f1;
-  border-radius: 5%;
+  width: 100%;
+  transition: all 300ms ease-in-out;
 }
+
+.dog:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
 .header-flex{
   display: flex;
   justify-content: flex-start;
@@ -130,10 +151,10 @@ body{
 .wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    margin: 60px;
+    margin: 2em;
     justify-items: center;
     text-align: center;
-    grid-gap: 10px;
+    grid-gap: 30px;
 }
 
 @media only screen and (max-width: 600px){
@@ -217,7 +238,7 @@ ul li {
 .button {
   /* position: relative; */
   padding: 10px 10px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   font-family: sans-serif;
   font-size: 1.0em;
   color: #FFF;
@@ -225,10 +246,53 @@ ul li {
   border: 0;
   background-color: #80CBC4;
   cursor: pointer;
+  width: 20%;
 }
 
 .button:hover {
   background-color: #4f9a94;
+}
+
+/* Footer */
+.footer-image {
+  background-image: url("../../dogjob/assets/Rectangle_2.png");
+  background-repeat: no-repeat;
+  height: 5.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-logo-wrapper {
+  align-self: center;
+}
+
+.footer-wrapper img {
+  width: 50px;
+  align-self: center;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  background: #80CBC4;
+  width: 100%;
+  height: auto;
+  margin-top: -2px;
+}
+
+.footer-text-blocks {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 90%;
+  margin-top: 1em;
+}
+
+.footer-text-blocks p {
+  padding: 1em;
+  color: white;
+  margin-bottom: 2em;
 }
 
 </style>
