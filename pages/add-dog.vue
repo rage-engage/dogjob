@@ -95,7 +95,7 @@ export default {
 
 .button {
   padding: 10px 10px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   font-family: sans-serif;
   font-size: 1.0em;
   color: #FFF;
@@ -103,6 +103,7 @@ export default {
   border: 0;
   background-color: #80CBC4;
   cursor: pointer;
+  width: 100%;
 }
 
 .button:hover {

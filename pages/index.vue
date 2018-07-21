@@ -55,4 +55,9 @@ export default {
 .links {
   padding-top: 15px;
 }
+
+.button--green {
+  width: 70%;
+  border-radius: 0px;
+}
 </style>
