@@ -12,8 +12,8 @@
           <p>Easy Payments</p>
         </div>
         <div class="icon">
-          <i class="fas fa-briefcase fa-5x"></i>
-          <p>Job Creation</p>
+          <i class="fas fa-home fa-5x"></i>
+          <p>Adoption</p>
         </div>
         <div class="icon">
           <i class="fas fa-life-ring fa-5x"></i>
@@ -21,7 +21,7 @@
         </div>
         <div class="icon">
           <i class="fas fa-heart fa-5x"></i>
-          <p>Love to Dogs</p>
+          <p>Love to Dogs with a Walk</p>
         </div>
       </div>
     </div>

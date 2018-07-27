@@ -17,8 +17,11 @@
                     <li><p class="dogName">{{ dog.first_name }}</p></li>
                     <!-- <li><input type="number" placeholder="Amount"></li> -->
                     <div class="pay-button">
-                        <li><button class="button2" type="submit" @click="tipDog(dog.id, 500)">Tip R5</button></li>
-                        <li><button class="button2" type="submit" @click="tipDog(dog.id, 1000)">Tip R10</button></li>
+                        <li><button class="button2" type="submit" @click="tipDog(dog.id, 500)">Tip R10</button></li>
+                        <li><button class="button2" type="submit" @click="tipDog(dog.id, 1000)">Tip R20</button></li>
+                    </div>
+                    <div class="adopt-button">
+                        <li><a href="http://tears.org.za/dogadoptionquestionnaire/" target="blank"><button class="button3" type="submit">Adopt</button></a></li>
                     </div>
                     <div class='figure' v-bind:style="{ 'animation-duration': calcDuration(dog)}"></div>
                 </ul>
@@ -169,6 +172,29 @@
   }
 }
 
+.adopt-button {
+    width: 100%;
+    display: flex;
+}
+
+.button3 {
+  width: 100%;
+  padding: 10px 50px;
+  /* border-radius: 10px; */
+  font-family: sans-serif;
+  font-size: 1.0em;
+  color: #FFF;
+  text-decoration: none;
+  border: 0;
+  background-color: #80CBC4;
+  cursor: pointer;
+  transition: all 400ms ease-in-out;
+}
+
+.button3:hover {
+  background-color: #4f9a94;
+}
+
 .logo{
   height: 70px;
   width: 70px;
@@ -215,6 +241,7 @@
 }
 
 ul li {
+    width: 100%;
     padding: 10px;
     list-style: none;
 }
